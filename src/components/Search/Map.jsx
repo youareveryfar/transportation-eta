@@ -35,11 +35,11 @@ export const Map = () => {
 
   const isMtr = routeData.co[0] === "mtr";
   const isLrt = routeData.co[0] === "lightRail";
-  const polylineColor = isMtr
-    ? mtrLineColor["&." + routeData.route].color
+  const polylineColor = (isMtr
+    ? mtrLineColor?.["&." + routeData.route]?.color
     : isLrt
-    ? mtrLineColor["&.L" + routeData.route].color
-    : companyColor["." + getFirstCoByRouteObj(routeData)]?.color;
+    ? mtrLineColor?.["&.L" + routeData.route]?.color
+    : companyColor?.["." + getFirstCoByRouteObj(routeData)]?.color;
 
   const currRouteStopIdList = useMemo(
     () => routeData.stops && routeData.stops[getFirstCoByRouteObj(routeData)],
