@@ -39,7 +39,7 @@ export const Map = () => {
     ? mtrLineColor?.["&." + routeData.route]?.color
     : isLrt
     ? mtrLineColor?.["&.L" + routeData.route]?.color
-    : companyColor?.["." + getFirstCoByRouteObj(routeData)]?.color;
+    : companyColor?.["." + getFirstCoByRouteObj(routeData)]?.color) ?? "#000000";
 
   const currRouteStopIdList = useMemo(
     () => routeData.stops && routeData.stops[getFirstCoByRouteObj(routeData)],
