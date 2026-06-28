@@ -220,10 +220,6 @@ export const mtrLineColor = {
     color: "#000000",
     stroke: "#000000",
   },
-  "&.undefined": {
-    color: "#000000",
-    stroke: "#000000",
-  },
 };
 
 export const mtrIconColor = {
@@ -271,9 +267,17 @@ export const mtrIconColor = {
     filter:
       "brightness(0) saturate(100%) invert(20%) sepia(36%) saturate(6351%) hue-rotate(344deg) brightness(94%) contrast(101%)",
   },
+  "&.L506P*": {
+    filter:
+      "none",
+  },
   "&.L507": {
     filter:
       "brightness(0) saturate(100%) invert(51%) sepia(64%) saturate(5247%) hue-rotate(127deg) brightness(93%) contrast(101%)",
+  },
+  "&.L507P*": {
+    filter:
+      "none",
   },
   "&.L610": {
     filter:
@@ -303,13 +307,29 @@ export const mtrIconColor = {
     filter:
       "brightness(0) saturate(100%) invert(73%) sepia(8%) saturate(2540%) hue-rotate(248deg) brightness(76%) contrast(81%)",
   },
+  "&.L720*": {
+    filter:
+      "none",
+  },
   "&.L751": {
     filter:
       "brightness(0) saturate(100%) invert(61%) sepia(25%) saturate(5033%) hue-rotate(348deg) brightness(101%) contrast(92%)",
   },
+  "&.L751P": {
+    filter:
+      "none",
+  },
+  "&.L751*": {
+    filter:
+      "none",
+  },
   "&.L761P": {
     filter:
       "brightness(0) saturate(100%) invert(20%) sepia(27%) saturate(5746%) hue-rotate(266deg) brightness(89%) contrast(89%)",
+  },
+  "&.LSPR": {
+    filter:
+      "none",
   },
 };
 
