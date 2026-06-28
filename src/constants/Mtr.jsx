@@ -220,6 +220,10 @@ export const mtrLineColor = {
     color: "#000000",
     stroke: "#000000",
   },
+  "&.undefined": {
+    color: "#000000",
+    stroke: "#000000",
+  },
 };
 
 export const mtrIconColor = {
