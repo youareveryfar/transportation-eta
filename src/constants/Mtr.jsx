@@ -156,9 +156,17 @@ export const mtrLineColor = {
     color: "#da2128",
     stroke: "#da2128",
   },
+  "&.L506P*": {
+    color: "#000000",
+    stroke: "#000000",
+  },
   "&.L507": {
     color: "#00a651",
     stroke: "#00a651",
+  },
+  "&.L507P*": {
+    color: "#000000",
+    stroke: "#000000",
   },
   "&.L610": {
     color: "#551b14",
@@ -188,13 +196,29 @@ export const mtrLineColor = {
     color: "#b37ab5",
     stroke: "#b37ab5",
   },
+  "&.L720*": {
+    color: "#000000",
+    stroke: "#000000",
+  },
   "&.L751": {
     color: "#f58220",
     stroke: "#f58220",
   },
+  "&.L751P": {
+    color: "#000000",
+    stroke: "#000000",
+  },
+  "&.L751*": {
+    color: "#000000",
+    stroke: "#000000",
+  },
   "&.L761P": {
     color: "#702c91",
     stroke: "#702c91",
+  },
+  "&.LSPR": {
+    color: "#000000",
+    stroke: "#000000",
   },
 };
 
