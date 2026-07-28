@@ -19,15 +19,21 @@ export const CategoryListItemText = ({ e }) => {
             // New bookmark format only have routeKey, seq & stopId
             const { routeKey } = f;
             const routeData = gRouteList[routeKey];
-            const co = routeKey ? getFirstCoByRouteObj(routeData) : f.co;
-            const route = routeKey ? routeData.route : f.route;
+            const co =
+              routeKey && routeData ? getFirstCoByRouteObj(routeData) : f.co;
+            const route =
+              routeKey && routeData
+                ? routeData.route
+                : routeKey
+                  ? routeKey.split("+")[0]
+                  : "";
 
             return (
               <span key={j} className="routeStopWrapper">
                 <span className="routeWrapper">
                   {co === "mtr" ? (
                     <span className={`route ${route}`}>{routeMap[route]}</span>
-                  ) : routeKey ? (
+                  ) : routeKey && routeData ? (
                     <span className={co}>{route}</span>
                   ) : (
                     <span className="error">

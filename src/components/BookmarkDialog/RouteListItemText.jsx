@@ -10,8 +10,13 @@ export const RouteListItemText = ({ e }) => {
   const { gRouteList, gStopList } = useContext(DbContext);
   const { routeKey } = e;
   const routeData = gRouteList[routeKey];
-  const co = routeKey ? getFirstCoByRouteObj(routeData) : e.co;
-  const route = routeKey ? routeData.route : e.route;
+  const co = routeKey && routeData ? getFirstCoByRouteObj(routeData) : e.co;
+  const route =
+    routeKey && routeData
+      ? routeData.route
+      : routeKey
+        ? routeKey.split("+")[0]
+        : "";
 
   return (
     <ListItemTextRoot
@@ -19,13 +24,13 @@ export const RouteListItemText = ({ e }) => {
         co === "mtr" ? (
           <span className={`route ${route}`}>{routeMap[route]}</span>
         ) : (
-          <span className={routeKey ? co : "error"}>{route}</span>
+          <span className={routeKey && routeData ? co : "error"}>{route}</span>
         )
       }
       secondary={
         co === "mtr" ? (
           <span className={route}>{gStopList[e.stopId].name.zh}</span>
-        ) : routeKey ? (
+        ) : routeKey && routeData ? (
           <span className={co}>{gStopList[e.stopId].name.zh}</span>
         ) : (
           <span className="error">
