@@ -39,7 +39,7 @@ export const ImportExportDialog = ({
       const decodedData = JSON.parse(
         decompressJson(encodedData, {
           inputEncoding: "Base64",
-        })
+        }),
       );
       const cleanDecodedData = decodedData.map((e) => ({
         ...e,
@@ -64,7 +64,7 @@ export const ImportExportDialog = ({
       let _importData = JSON.parse(
         decompressJson(importData, {
           inputEncoding: "Base64",
-        })
+        }),
       );
 
       if (Array.isArray(_importData[0].data[0])) {
@@ -89,7 +89,7 @@ export const ImportExportDialog = ({
       JSON.parse(
         decompressJson(exportData, {
           inputEncoding: "Base64",
-        })
+        }),
       );
       navigator.clipboard.writeText(exportData);
       enqueueSnackbar("已複製資料到剪貼簿, 請妥善保管。", {
@@ -107,7 +107,7 @@ export const ImportExportDialog = ({
       JSON.parse(
         decompressJson(importData, {
           inputEncoding: "Base64",
-        })
+        }),
       );
       setPreviewFrom("import");
       setImportExportMode("importPreview");
@@ -123,7 +123,7 @@ export const ImportExportDialog = ({
       JSON.parse(
         decompressJson(exportData, {
           inputEncoding: "Base64",
-        })
+        }),
       );
       setPreviewFrom("export");
       setImportExportMode("exportPreview");

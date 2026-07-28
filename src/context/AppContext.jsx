@@ -57,13 +57,15 @@ export const AppProvider = ({ children }) => {
           setLocalStorage("stopMap", response.data.stopMap);
           setLocalStorage("routeList", response.data.routeList);
           setLocalStorage("stopList", response.data.stopList);
-          const bookmark = getLocalStorage("bookmark") || [];
-          const _bookmarkV2 = upgradeBookmark(bookmark);
-          setLocalStorage("bookmarkV2", _bookmarkV2);
-          localStorage.setItem(
-            "bookmarkV2_nocompress",
-            JSON.stringify(_bookmarkV2)
-          );
+          const bookmark = getLocalStorage("bookmark");
+          if (bookmark) {
+            const _bookmarkV2 = upgradeBookmark(bookmark);
+            setLocalStorage("bookmarkV2", _bookmarkV2);
+            localStorage.setItem(
+              "bookmarkV2_nocompress",
+              JSON.stringify(_bookmarkV2),
+            );
+          }
         });
     }
   }, []);
@@ -76,7 +78,7 @@ export const AppProvider = ({ children }) => {
       appVersion,
       serVersion,
     }),
-    [dbVersion, initDb, initAppVersion, appVersion, serVersion]
+    [dbVersion, initDb, initAppVersion, appVersion, serVersion],
   );
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
