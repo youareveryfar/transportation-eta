@@ -96,8 +96,8 @@ export const List = ({ etaResult, longList }) => {
                 <span className={`route ${e.route}`}>{routeMap[e?.route]}</span>
               ) : (
                 <>
-                  {e.co === "error" && <PriorityHighIcon fontSize="small" />}
                   <span className={`${e.co}`}>{e?.route}</span>
+                  {e.co === "error" && <PriorityHighIcon fontSize="small" />}
                 </>
               )}
             </div>
