@@ -156,9 +156,17 @@ export const mtrLineColor = {
     color: "#da2128",
     stroke: "#da2128",
   },
+  "&.L506P*": {
+    color: "#000000",
+    stroke: "#000000",
+  },
   "&.L507": {
     color: "#00a651",
     stroke: "#00a651",
+  },
+  "&.L507P*": {
+    color: "#000000",
+    stroke: "#000000",
   },
   "&.L610": {
     color: "#551b14",
@@ -188,13 +196,29 @@ export const mtrLineColor = {
     color: "#b37ab5",
     stroke: "#b37ab5",
   },
+  "&.L720*": {
+    color: "#000000",
+    stroke: "#000000",
+  },
   "&.L751": {
     color: "#f58220",
     stroke: "#f58220",
   },
+  "&.L751P": {
+    color: "#000000",
+    stroke: "#000000",
+  },
+  "&.L751*": {
+    color: "#000000",
+    stroke: "#000000",
+  },
   "&.L761P": {
     color: "#702c91",
     stroke: "#702c91",
+  },
+  "&.LSPR": {
+    color: "#000000",
+    stroke: "#000000",
   },
 };
 
@@ -243,9 +267,17 @@ export const mtrIconColor = {
     filter:
       "brightness(0) saturate(100%) invert(20%) sepia(36%) saturate(6351%) hue-rotate(344deg) brightness(94%) contrast(101%)",
   },
+  "&.L506P*": {
+    filter:
+      "none",
+  },
   "&.L507": {
     filter:
       "brightness(0) saturate(100%) invert(51%) sepia(64%) saturate(5247%) hue-rotate(127deg) brightness(93%) contrast(101%)",
+  },
+  "&.L507P*": {
+    filter:
+      "none",
   },
   "&.L610": {
     filter:
@@ -275,13 +307,29 @@ export const mtrIconColor = {
     filter:
       "brightness(0) saturate(100%) invert(73%) sepia(8%) saturate(2540%) hue-rotate(248deg) brightness(76%) contrast(81%)",
   },
+  "&.L720*": {
+    filter:
+      "none",
+  },
   "&.L751": {
     filter:
       "brightness(0) saturate(100%) invert(61%) sepia(25%) saturate(5033%) hue-rotate(348deg) brightness(101%) contrast(92%)",
   },
+  "&.L751P": {
+    filter:
+      "none",
+  },
+  "&.L751*": {
+    filter:
+      "none",
+  },
   "&.L761P": {
     filter:
       "brightness(0) saturate(100%) invert(20%) sepia(27%) saturate(5746%) hue-rotate(266deg) brightness(89%) contrast(89%)",
+  },
+  "&.LSPR": {
+    filter:
+      "none",
   },
 };
 
