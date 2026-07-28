@@ -19,7 +19,6 @@ import { Personal } from "./pages/Settings/Personal";
 import { Redirect } from "./pages/Redirect";
 import { Playground } from "./pages/Playground";
 import { BookmarkModify } from "./pages/Settings/BookmarkModify";
-import { Direction } from "./pages/Direction";
 import { Pin } from "./components/Pin";
 
 const App = () => {
@@ -42,7 +41,6 @@ const App = () => {
           <Route path="/search/:routeKey/:stopId" element={<Search />} />
           <Route path="/news" element={<News />} />
           <Route path="/weather" element={<Weather />} />
-          <Route path="/direction" element={<Direction />} />
           <Route path="/more" element={<More />} />
           <Route path="/bookmark" element={<Bookmark />} />
           <Route path="/playground" element={<Playground />} />

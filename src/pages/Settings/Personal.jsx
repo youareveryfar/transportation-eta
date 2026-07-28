@@ -27,7 +27,6 @@ import {
   Filter9 as Filter9Icon,
   ManageSearch as ManageSearchIcon,
   SavedSearch as SavedSearchIcon,
-  Directions as DirectionsIcon,
 } from "@mui/icons-material";
 import { SimpleSettingDialog } from "../../components/Settings/SimpleSettingDialog";
 
@@ -51,7 +50,6 @@ export const Personal = () => {
     { primary: "路線搜尋", icon: <DirectionsBusIcon /> },
     { primary: "交通消息", icon: <AnnouncementIcon /> },
     { primary: "書籤", icon: <BookmarkIcon /> },
-    { primary: "規劃路線", icon: <DirectionsIcon /> },
     { primary: "天氣", icon: <ThermostatIcon /> },
   ];
 
@@ -123,7 +121,7 @@ export const Personal = () => {
               <Avatar>
                 {
                   defaultScreenOptions.filter(
-                    (e) => e.primary === defaultScreen
+                    (e) => e.primary === defaultScreen,
                   )[0]?.icon
                 }
               </Avatar>
@@ -139,7 +137,7 @@ export const Personal = () => {
               <Avatar>
                 {
                   searchMethodOptions.filter(
-                    (e) => e.primary === searchMethod
+                    (e) => e.primary === searchMethod,
                   )[0]?.icon
                 }
               </Avatar>
@@ -155,7 +153,7 @@ export const Personal = () => {
               <Avatar>
                 {
                   bookmarkDisplayOptions.filter(
-                    (e) => e.primary === bookmarkDisplay
+                    (e) => e.primary === bookmarkDisplay,
                   )[0]?.icon
                 }
               </Avatar>

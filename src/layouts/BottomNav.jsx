@@ -10,7 +10,6 @@ import {
   DirectionsBus as DirectionsBusIcon,
   Bookmark as BookmarkIcon,
   Announcement as AnnouncementIcon,
-  Directions as DirectionsIcon,
   Settings as SettingsIcon,
 } from "@mui/icons-material";
 import { AppContext } from "../context/AppContext";
@@ -46,13 +45,6 @@ export const BottomNav = () => {
         style={({ isActive }) => (isActive ? activeStyle : undefined)}
         label="書籤"
         icon={<BookmarkIcon />}
-      />
-      <BottomNavigationAction
-        component={NavLink}
-        style={({ isActive }) => (isActive ? activeStyle : undefined)}
-        to="/direction"
-        label="規劃路線"
-        icon={<DirectionsIcon />}
       />
       <BottomNavigationAction
         label="設定"

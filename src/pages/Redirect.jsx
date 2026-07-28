@@ -6,7 +6,7 @@ export const Redirect = () => {
 
   useEffect(() => {
     const defaultScreen = JSON.parse(
-      localStorage.getItem("settings")
+      localStorage.getItem("settings"),
     )?.defaultScreen;
 
     switch (defaultScreen) {
@@ -20,10 +20,6 @@ export const Redirect = () => {
 
       case "書籤":
         navigate("/bookmark", { replace: true });
-        break;
-
-      case "規劃路線":
-        navigate("/direction", { replace: true });
         break;
 
       case "天氣":
